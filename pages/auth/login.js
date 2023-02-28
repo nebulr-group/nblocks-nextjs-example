@@ -1,11 +1,12 @@
 import { useEffect } from 'react'
-import {AuthClient} from '../../auth_client'
+import {AuthService} from '../../auth_service'
 
 export default function Login() {
 
   useEffect(() => {
-    window.location.assign(`${AuthClient.BASE_URL}/url/login/${AuthClient.APP_ID}`);
+    // Start login by redirecting user immediately on page load
+    window.location.assign(`${AuthService.BASE_URL}/url/login/${AuthService.APP_ID}`);
   })
 
-  return ("")
+  return ("");
 }
